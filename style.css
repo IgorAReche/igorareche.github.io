@@ -1,0 +1,13 @@
+font-family: 'Playfair Display', ;
+h1{
+	text-align: center;
+	text-float: right;
+	background-image: url(Images/por-do-sol.jpg);
+}
+#cover{
+	background: #222 url('Images/business-team-meeting-boardroom.jpg')
+	background-size: cover;
+	color: white;
+	height: 100%;
+	text-align: center;
+}
