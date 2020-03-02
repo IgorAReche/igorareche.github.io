@@ -1,0 +1,11 @@
+font-family: 'Playfair Display', ;
+h1{
+	text-align: center;
+}
+#cover{
+	background: #222 url('Images/business-team-meeting-boardroom.jpg')
+	background-size: cover;
+	color: white;
+	height: 100%;
+	text-align: center;
+}
