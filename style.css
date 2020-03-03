@@ -42,7 +42,6 @@ font-family: 'Playfair Display';
 	padding-left: 54px;
 }
 .form-group::before {
-	font-family: 'Font Awesome\ 5 Free';
 	content: '\f007';
 	font-weight: 900;
 	position: absolute;
