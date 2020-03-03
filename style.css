@@ -1,12 +1,23 @@
 font-family: 'Playfair Display';
-h1{
-	text-align: center;
-	background-image: url(Images/por-do-sol.jpg);
-}
 #cover{
-	background: #222 url('Images/business-team-meeting-boardroom.jpg')
+	background: url("Images/por-do-sol.jpg");
 	background-size: cover;
 	color: white;
 	height: 100%;
 	text-align: center;
+
+}
+#login{
+	background-image: url(Images/sky-and-tree.jpg);
+	background-size: cover;
+}
+.main-section{
+	margin: 0 auto;
+	margin-top: 130px;
+	padding: 0;
+}
+.modal-content {
+	background-color: #ADFF2F;
+	opacity: .95;
+	padding: 0 18px;
 }
