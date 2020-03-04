@@ -19,7 +19,7 @@ font-family: 'Playfair Display';
 #login .model-content{
 	background-color: #20d6b4;
 	opacity: .95;
-	padding: 0 18px;
+	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 0 0 31px #000000ab;
 }
@@ -35,13 +35,15 @@ font-family: 'Playfair Display';
 	margin-bottom: 25px;
 }
 .form-group input {
-	height: 42 px;
+	pointer-events: all;
+	height: 42px;
 	border-radius: 5px;
 	border: 0;
-	font-size: 18 px;
+	font-size: 18px;
 	padding-left: 54px;
 }
 .form-group::before {
+	font-family: "Font Awesome 5 Pro";
 	content: '\f007';
 	font-weight: 900;
 	position: absolute;
@@ -52,4 +54,7 @@ font-family: 'Playfair Display';
 .form-group:last-of-type::before {
 	content:"\f023";
 	font-weight: 900;
+}
+#login .model-content {
+	pointer-events: all;
 }
