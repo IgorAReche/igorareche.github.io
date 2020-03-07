@@ -11,7 +11,9 @@ function entrarnosite(){
 		alert("Por favor digite um usuário válido")
 	}
 }
-
+function descritiva(){
+	window.location.href('estatistica-descritiva.html')
+}
 
 
 
