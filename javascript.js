@@ -11,31 +11,33 @@ function entrarnosite(){
 		alert("Por favor digite um usuário válido")
 	}
 }
-function descritiva(){
-	window.location.href('estatistica-descritiva.html')
+
+
+function entradadosdados(){
+var entrada;
+var splitados = new Array();
+var dados = prompt("Digite os dados");
+if (dados != ""){
+	entrada = dados;
+	var splitados = entrada.split(";");
+	alert(entrada)
+	}
+
+
+	
+
+
+
+const insertion_Sort = (nums) => {
+  for (let i = 1; i < nums.length; i++) {
+    let j = i - 1
+    let temp = nums[i]
+    while (j >= 0 && nums[j] > temp) {
+      nums[j + 1] = nums[j]
+      j--
+    }
+    nums[j+1] = temp
+  }
+  return nums
 }
 
-
-
-
-function bubble_Sort(a)
-{
-    var swapp;
-    var n = a.length-1;
-    var x=a;
-    do {
-        swapp = false;
-        for (var i=0; i < n; i++)
-        {
-            if (x[i] < x[i+1])
-            {
-               var temp = x[i];
-               x[i] = x[i+1];
-               x[i+1] = temp;
-               swapp = true;
-            }
-        }
-        n--;
-    } while (swapp);
- return x; 
-}
