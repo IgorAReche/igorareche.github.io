@@ -14,33 +14,21 @@ function entrarnosite(){
 
 
 function entradadosdados(){
-var entrada;
-var splitados = new Array();
-var dados = prompt("Digite os dados");
-if (dados != ""){
-	entrada = dados;
-	var splitados = entrada.split(";");
-	alert(splitados);
-	return splitados
+	var splitados = new Array();
+	var dados = prompt("Digite os dados");
+	if (dados != ""){
+		var splitados = dados.split(";");
+		alert(splitados);
+	}
+	if (isNaN(splitados[0]) == true){
+		splitados.sort()
+		alert(splitados);
+	}
+		else {splitados.sort((a, b) =>  a - b);
+			alert(splitados);
 	}
 }
 
-function ordenacao(splitados){
-	const insertion_Sort = (splitados) => {
-  for (let i = 1; i < splitados.length; i++) {
-    let j = i - 1
-    let temp = splitados[i]
-    while (j >= 0 && splitados[j] > temp) {
-      splitados[j + 1] = splitados[j]
-      j--
-    }
-    splitados[j+1] = temp
-  }
-  alert(splitados);
-  return splitados
-  
-}
-}
 	
 
 
