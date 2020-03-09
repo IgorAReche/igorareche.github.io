@@ -21,6 +21,7 @@ if (dados != ""){
 	entrada = dados;
 	var splitados = entrada.split(";");
 	alert(splitados);
+	return splitados
 	}
 }
 
@@ -35,7 +36,7 @@ function ordenacao(splitados){
     }
     splitados[j+1] = temp
   }
-  alert(temp);
+  alert(splitados);
   return splitados
   
 }
