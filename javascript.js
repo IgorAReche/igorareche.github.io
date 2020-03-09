@@ -20,24 +20,27 @@ var dados = prompt("Digite os dados");
 if (dados != ""){
 	entrada = dados;
 	var splitados = entrada.split(";");
-	alert(entrada)
+	alert(splitados);
 	}
+}
 
-
+function ordenacao(splitados){
+	const insertion_Sort = (splitados) => {
+  for (let i = 1; i < splitados.length; i++) {
+    let j = i - 1
+    let temp = splitados[i]
+    while (j >= 0 && splitados[j] > temp) {
+      splitados[j + 1] = splitados[j]
+      j--
+    }
+    splitados[j+1] = temp
+  }
+  alert(temp);
+  return splitados
+  
+}
+}
 	
 
 
-
-const insertion_Sort = (nums) => {
-  for (let i = 1; i < nums.length; i++) {
-    let j = i - 1
-    let temp = nums[i]
-    while (j >= 0 && nums[j] > temp) {
-      nums[j + 1] = nums[j]
-      j--
-    }
-    nums[j+1] = temp
-  }
-  return nums
-}
 
