@@ -15,18 +15,37 @@ function entrarnosite(){
 
 function entradadosdados(){
 	var splitados = new Array();
+	var i;
+	var repetidos = new Array();
+	var cont = new Array();
 	var dados = prompt("Digite os dados");
 	if (dados != ""){
 		var splitados = dados.split(";");
-		alert(splitados);
 	}
 	if (isNaN(splitados[0]) == true){
-		splitados.sort()
+		splitados.sort();
 		alert(splitados);
 	}
-		else {splitados.sort((a, b) =>  a - b);
+		else {
+			splitados.sort((a, b) =>  a - b);
 			alert(splitados);
 	}
+	
+	for (i = 0; i<splitados.length; i ++) {
+		if (splitados[i] == splitados[i++]){
+				repetidos = splitados.splice(splitados[i], splitados[i++]);
+
+			cont[i] = cont + 1
+			
+		}
+			else {
+				repetidos[i] = splitados[i];
+				cont[i] = 1
+			}
+		alert(repetidos);
+		
+	}
+
 }
 
 
