@@ -19,35 +19,51 @@ function entradadosdados(){
 	var repetidos = new Array();
 	var cont = new Array();
 	var dados = prompt("Digite os dados");
+	var j;
+	var contador = new Array();
+	contador = 0;
+	var controle;
+
 	if (dados != ""){
 		var splitados = dados.split(";");
 	}
 	if (isNaN(splitados[0]) == true){
 		splitados.sort();
-		alert(splitados);
 	}
 		else {
 			splitados.sort((a, b) =>  a - b);
-			alert(splitados);
+			
 	}
 	
 	for (i = 0; i<splitados.length; i ++) {
-		if (splitados[i] == splitados[i++]){
-				repetidos[i] = splitados.splice(splitados[i], splitados[i++]);
-
-			cont[i] = cont + 1
-			
-		}
-			else {
-				repetidos[i] = splitados[i];
-				cont[i] = 1
+		cont[i] = 0;
+		for (j = 0; j<splitados.length; j++){
+			if (splitados[i] == splitados[j]){
+				cont[i] ++;
 			}
-		alert(repetidos);
-		alert()
+			
 	}
-
+	
 }
-
+	console.log(splitados);
+	console.log(cont);
+	repetidos= "";
+	for(i=0; i <cont.length; i ++) {
+		if (cont[i] > 0) {
+			controle = 0;
+			for(j=0; j<splitados.length; j++){
+				if (repetidos[i] == splitados[j]){
+					controle = 1;
+					console.log(splitado[j] + "   "  + splitado[i]);
+				}
+			}
+			if(controle == 0) {
+				console.log("elemento: " + splitados[i] + " repetições: " + cont[i]);
+				repetidos[i] = splitados[i];
+			}
+		}
+	}
+}
 
 
  	
