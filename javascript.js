@@ -33,7 +33,7 @@ function entradadosdados(){
 	
 	for (i = 0; i<splitados.length; i ++) {
 		if (splitados[i] == splitados[i++]){
-				repetidos = splitados.splice(splitados[i], splitados[i++]);
+				repetidos[i] = splitados.splice(splitados[i], splitados[i++]);
 
 			cont[i] = cont + 1
 			
@@ -43,7 +43,7 @@ function entradadosdados(){
 				cont[i] = 1
 			}
 		alert(repetidos);
-		
+		alert()
 	}
 
 }
