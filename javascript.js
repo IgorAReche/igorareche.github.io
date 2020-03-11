@@ -1,14 +1,14 @@
 function entrarnosite(){
-	var nome = document.getElementById('nome').value
-	var senha = document.getElementById('senha').value
+	var nome = document.getElementById('nome').value;
+	var senha = document.getElementById('senha').value;
 	
 
 	if (nome == "admin" && senha == 123){
 	
-	window.open('first-page.html')
+	window.open('first-page.html');
 	}
 	else{
-		alert("Por favor digite um usuário válido")
+		alert("Por favor digite um usuário válido");
 	}
 }
 
@@ -23,6 +23,9 @@ function entradadosdados(){
 	var contador = new Array();
 	contador = 0;
 	var controle;
+	var tabela = document.createElement("table");
+	var thead = document.createElement("thead");
+  	var tbody = document.createElement("tbody");
 
 	if (dados != ""){
 		var splitados = dados.split(";");
@@ -49,12 +52,12 @@ function entradadosdados(){
 	console.log(cont);
 	repetidos= "";
 	for(i=0; i <cont.length; i ++) {
-		if (cont[i] > 0) {
+		if (cont[i] > 0) { //cont[i] != undefined
 			controle = 0;
 			for(j=0; j<splitados.length; j++){
 				if (repetidos[i] == splitados[j]){
 					controle = 1;
-					console.log(splitado[j] + "   "  + splitado[i]);
+					console.log(splitado[j] + " "  + splitado[i]);
 				}
 			}
 			if(controle == 0) {
@@ -63,7 +66,26 @@ function entradadosdados(){
 			}
 		}
 	}
-}
+        var body = document.getElementsByTagName("body")[0];
+        var tbl = document.createElement("table");
+        var tblBody = document.createElement("tbody");
+
+        for (var j = 0; j < repetidos.length; j++) {
+            var row = document.createElement("tr");
+			for (var i = 0; i < 2; i++) {
+                var cell = document.createElement("td");
+                var cellText = document.createTextNode(splitados);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+
+            tblBody.appendChild(row);
+        }
+        tbl.appendChild(tblBody);
+        body.appendChild(tbl);
+        tbl.setAttribute("border", "2");
+    }
+
 
 
  	
