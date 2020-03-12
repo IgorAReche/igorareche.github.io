@@ -23,9 +23,8 @@ function entradadosdados(){
 	var contador = new Array();
 	contador = 0;
 	var controle;
-	var tabela = document.createElement("table");
-	var thead = document.createElement("thead");
-  	var tbody = document.createElement("tbody");
+	
+  	
 
 	if (dados != ""){
 		var splitados = dados.split(";");
@@ -45,11 +44,10 @@ function entradadosdados(){
 				cont[i] ++;
 			}
 			
+		} 	
+	
 	}
 	
-}
-	console.log(splitados);
-	console.log(cont);
 	repetidos= "";
 	for(i=0; i <cont.length; i ++) {
 		if (cont[i] > 0) { //cont[i] != undefined
@@ -66,25 +64,12 @@ function entradadosdados(){
 			}
 		}
 	}
-        var body = document.getElementsByTagName("body")[0];
-        var tbl = document.createElement("table");
-        var tblBody = document.createElement("tbody");
+	var coluna = new Array();
+	
 
-        for (var j = 0; j < repetidos.length; j++) {
-            var row = document.createElement("tr");
-			for (var i = 0; i < 2; i++) {
-                var cell = document.createElement("td");
-                var cellText = document.createTextNode(splitados);
-                cell.appendChild(cellText);
-                row.appendChild(cell);
-            }
+	
 
-            tblBody.appendChild(row);
-        }
-        tbl.appendChild(tblBody);
-        body.appendChild(tbl);
-        tbl.setAttribute("border", "2");
-    }
+}
 
 
 
