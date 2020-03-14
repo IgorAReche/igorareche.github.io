@@ -50,21 +50,24 @@ function entradadosdados(){
 	
 	var html = '<table id="tabela"> <th> <td>fi</td> <td>f%</td> </th>'; 
 	for(i=0; i <cont.length; i ++) {
-		if (cont[i] > 0) { //cont[i] != undefined
 			controle = 0;
 			for(j=0; j<splitados.length; j++){
-				console.log(splitados[j] + " "  + repetidos);
-				if (repetidos[i] == splitados[j]){
+				console.log(splitados[j] + " "  + repetidos[i]);
+				if (repetidos[j] == splitados[i]){
 					controle = 1;
 					
 				}
 			}
-			if(controle == 0) {
+			if (controle == 0) {
 				html += "<tr><td> " + splitados[i] + "</td><td> " + cont[i] + "</td></tr>";
 				repetidos[i] = splitados[i];
 			}
+			else{
+				repetidos[i] = -1;
+
+			}
 		}
-	}
+	
 	html += '</table>';
 	document.getElementById('tabela').innerHTML = html;
 	console.log(html);
