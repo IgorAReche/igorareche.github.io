@@ -16,7 +16,7 @@ function entrarnosite(){
 function entradadosdados(){
 	var splitados = new Array();
 	var i;
-	var repetidos = new Array();
+	var repetidos = [];
 	var cont = new Array();
 	var dados = prompt("Digite os dados");
 	var j;
@@ -48,27 +48,26 @@ function entradadosdados(){
 	
 	}
 	
-	repetidos= "";
+	var html = '<table id="tabela"> <th> <td>fi</td> <td>f%</td> </th>'; 
 	for(i=0; i <cont.length; i ++) {
 		if (cont[i] > 0) { //cont[i] != undefined
 			controle = 0;
 			for(j=0; j<splitados.length; j++){
+				console.log(splitados[j] + " "  + repetidos);
 				if (repetidos[i] == splitados[j]){
 					controle = 1;
-					console.log(splitado[j] + " "  + splitado[i]);
+					
 				}
 			}
 			if(controle == 0) {
-				console.log("elemento: " + splitados[i] + " repetições: " + cont[i]);
+				html += "<tr><td> " + splitados[i] + "</td><td> " + cont[i] + "</td></tr>";
 				repetidos[i] = splitados[i];
 			}
 		}
 	}
-	var coluna = new Array();
-	
-
-	
-
+	html += '</table>';
+	document.getElementById('tabela').innerHTML = html;
+	console.log(html);
 }
 
 
