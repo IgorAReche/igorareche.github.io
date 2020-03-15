@@ -11,8 +11,22 @@ function entrarnosite(){
 		alert("Por favor digite um usuário válido");
 	}
 }
+function menudropdown() {
+  document.getElementById("tipos-descritivos").classList.toggle("show");
 
-
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+}
 function entradadosdados(){
 	var splitados = new Array();
 	var i;
@@ -75,9 +89,6 @@ function entradadosdados(){
 	html += '</table>';
 	document.getElementById('tabela').innerHTML = html;
 	console.log(html);
-
-
-
 }
 
 
