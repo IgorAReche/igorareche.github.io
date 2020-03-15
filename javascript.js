@@ -48,7 +48,7 @@ function entradadosdados(){
 		totalrep = cont[i] + totalrep;
 	}
 	
-	var html = '<table id="tabela"> <th> <td>fi</td> <td>f%</td> </th>'; 
+	var html = '<table id="tabela"> <th> <td>fi</td> <td>f%</td> <td>facm</td> <td>facm%</td> </th>'; 
 	for(i=0; i <cont.length; i ++) {
 		fperc[i] = Math.round(((cont[i] / totalrep) * 100));
 			controle = 0;
