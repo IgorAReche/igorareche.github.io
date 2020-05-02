@@ -73,7 +73,7 @@ function entradadosdados(){
 				}
 			}
 			if (controle == 0) {
-				html += "<tr><td> " + splitados[i] + "</td><td> " + cont[i] + "</td><td>"  + fperc[i] + "</td></tr>"
+				html += "<tr><td> " + splitados[i] + "</td><td> " + cont[i] + "</td><td>"  + (fperc[i]*cont[i]) + "</td></tr>"
 				repetidos[i] = splitados[i];
 
 			}
