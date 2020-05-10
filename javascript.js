@@ -27,6 +27,12 @@ window.onclick = function(event) {
   }
 } 
 }
+function uploader() {
+	var x = document.createElement("INPUT");
+	x.setAttribute("type", "file");
+	document.body.appendChild(x);
+  }
+  
 function entradadosdados(){
 	var splitados = new Array();
 	var i;
